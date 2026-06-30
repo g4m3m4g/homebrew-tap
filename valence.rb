@@ -5,21 +5,21 @@
 class Valence < Formula
   desc "Targeted wordlist generator for authorized security audits and pentests"
   homepage "https://github.com/g4m3m4g/Valence"
-  version "1.0.0"
+  version "1.0.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/g4m3m4g/Valence/releases/download/v1.0.0/valence_darwin_amd64.tar.gz"
-      sha256 "28ccfb1482adbf17996fc24954e6aad3724c8a7fab3a2b38f00692d66d0aa6f7"
+      url "https://github.com/g4m3m4g/Valence/releases/download/v1.0.1/valence_darwin_amd64.tar.gz"
+      sha256 "edccf008edc3eccb590ba1eb6636bf49e1072680b053bab9868ed171af7ef88b"
 
       define_method(:install) do
         bin.install "valence"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/g4m3m4g/Valence/releases/download/v1.0.0/valence_darwin_arm64.tar.gz"
-      sha256 "552b735ebe7a62c2ba859efb21432cca8250c93a408d42b31fe1a672f6ffac85"
+      url "https://github.com/g4m3m4g/Valence/releases/download/v1.0.1/valence_darwin_arm64.tar.gz"
+      sha256 "e5bfd8a211c182a14ee5f6d87c85d6b5f78d9528b9140f0b5ad01dca61711bb2"
 
       define_method(:install) do
         bin.install "valence"
@@ -29,15 +29,15 @@ class Valence < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/g4m3m4g/Valence/releases/download/v1.0.0/valence_linux_amd64.tar.gz"
-      sha256 "d76746efb4e4cf05d873212f2fcd3249867f4509aab35e0d871055e91419bac3"
+      url "https://github.com/g4m3m4g/Valence/releases/download/v1.0.1/valence_linux_amd64.tar.gz"
+      sha256 "9193b095fe71806b7ab4cb8455df9ab19abfffb83a663dbff6e53227ddf77001"
       define_method(:install) do
         bin.install "valence"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/g4m3m4g/Valence/releases/download/v1.0.0/valence_linux_arm64.tar.gz"
-      sha256 "6daec1f7bb65f67e23ce353ea146d279e109e949dc1dd2769d632a3027c2612e"
+      url "https://github.com/g4m3m4g/Valence/releases/download/v1.0.1/valence_linux_arm64.tar.gz"
+      sha256 "74583f70ef46ce1d6724c5a1a877f421aa8b8ce29d06280058849f7699e96b68"
       define_method(:install) do
         bin.install "valence"
       end
